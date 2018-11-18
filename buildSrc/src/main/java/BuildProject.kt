@@ -1,9 +1,12 @@
-import org.gradle.kotlin.dsl.*
+import org.gradle.kotlin.dsl.KotlinBuildScript
+import org.gradle.kotlin.dsl.dependencies
+import org.gradle.kotlin.dsl.kotlin
+import org.gradle.kotlin.dsl.repositories
 
 fun KotlinBuildScript.projectBuild() {
 
-    group = "com.m4kvn"
-    version = "1.0-SNAPSHOT"
+    group = Properties.pluginGroup
+    version = Properties.pluginVersion
 
     repositories {
         mavenCentral()
