@@ -2,20 +2,20 @@
 
 ## Usage template
 
-1. Clone this repository and rename to your plugin name.
+### 1. Clone this repository and rename to your plugin name.
 
 ```
 git clone https://github.com/m4kvn/sponge-template.git <your-plugin-name>
 ```
 
-2. Remove `.git`
+### 2. Remove `.git`
 
 ```
 cd <your-plugin-name>
 rm -fr .git
 ```
 
-3. Edit Properties for your plugin.
+### 3. Edit Properties for your plugin.
 
 Please edit `buildSrc/src/main/java/Properties.kt`
 
@@ -31,13 +31,13 @@ object Properties {
 }
 ```
 
-4. Refactor main package for your plugin.
+### 4. Refactor main package for your plugin.
 
 Rename `com.m4kvn.spongetemplate` to your package name.
 
 ex) `com.<your-github-id>.<your-plugin-id>`
 
-5. Edit Plugin information for your plugin.
+### 5. Edit Plugin information for your plugin.
 
 Rename `id`, `name` and `description`.
 
