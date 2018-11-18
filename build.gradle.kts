@@ -7,14 +7,8 @@ plugins {
 group = "com.m4kvn"
 version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
-
-dependencies {
-    compile(kotlin("stdlib-jdk8"))
-}
-
 tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "1.8"
 }
+
+projectBuild()
