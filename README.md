@@ -1,6 +1,6 @@
 # sponge-template
 
-## Usage template
+## Usage
 
 ### 1. Clone this repository and rename to your plugin name.
 
