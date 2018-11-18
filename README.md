@@ -15,6 +15,15 @@ cd <your-plugin-name>
 rm -fr .git
 ```
 
+### 3. Edit `setting.gralde` for your plugin.
+
+Rename `'sponge-template'` to your plugin name.<br>
+This name is base name of your plugin jar file.
+
+```setting.gradle
+rootProject.name = 'sponge-template'
+```
+
 ### 3. Edit Properties for your plugin.
 
 Please edit `buildSrc/src/main/java/Properties.kt`
