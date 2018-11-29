@@ -5,8 +5,30 @@ plugins {
     id("org.spongepowered.plugin") version "0.8.1"
 }
 
-projectBuild()
+group = "com.m4kvn"
+version = "1.0-SNAPSHOT"
 
-tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+repositories {
+    mavenCentral()
+}
+
+val embed: Configuration by configurations.creating {
+    extendsFrom(configurations["implementation"])
+}
+
+dependencies {
+    embed(kotlin("stdlib-jdk8"))
+    implementation("org.spongepowered:spongeapi:7.0.0")
+}
+
+val jar: Jar by tasks
+jar.apply {
+    from(configurations["embed"].map {
+        if (it.isDirectory) it as Any else zipTree(it)
+    })
+}
+
+val compileKotlin: KotlinCompile by tasks
+compileKotlin.kotlinOptions {
+    jvmTarget = "1.8"
 }
